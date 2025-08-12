@@ -52,9 +52,9 @@
             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">The Core Principles</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Cybersecurity is built on two foundational frameworks: The CIA Triad and AAA. These concepts govern how we protect data and manage access.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
                     <h3 class="text-2xl font-bold mb-4 text-center text-[#003f5c]">The CIA Triad</h3>
-                    <div class="space-y-4">
+                    <div class="space-y-4 h-full flex flex-col justify-center">
                         <div class="flex items-start">
                             <span class="text-3xl mr-4">🛡️</span>
                             <div>
@@ -78,9 +78,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
                     <h3 class="text-2xl font-bold mb-4 text-center text-[#665191]">The AAA Framework</h3>
-                    <div class="space-y-4">
+                    <div class="space-y-4 h-full flex flex-col justify-center">
                         <div class="flex items-start">
                             <span class="text-3xl mr-4">🔑</span>
                             <div>
@@ -150,6 +150,80 @@
                     <a href="https://www.techradar.com/gaming/consoles-pc/insomniac-games-responds-to-distressing-cyberattack-like-logan-insomniac-is-resilient" class="text-[#ffa600] font-semibold hover:underline mb-2">Read More</a>
                     <p class="text-4xl kpi-value">1.3 Million</p>
                     <p class="font-semibold text-gray-700">Internal Files Leaked</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="security-tools" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Market-Leading Cybersecurity Tools</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">The cybersecurity industry offers a wide array of products, from all-in-one platforms to specialized solutions for specific tasks like authentication and event management.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#003f5c]">Comprehensive AAA Platforms</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#003f5c]">Okta</h4>
+                            <p class="text-gray-600">A leader in identity and access management (IAM), offering a cloud-based solution that centralizes user authentication, provides granular authorization controls, and logs all user activities for auditing.</p>
+                            <a href="https://www.okta.com/" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#003f5c]">Microsoft Entra ID</h4>
+                            <p class="text-gray-600">A cloud-based IAM service that integrates tightly with the Microsoft ecosystem, providing robust authentication via MFA, authorization through role-based access, and detailed logging for accounting purposes.</p>
+                            <a href="https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#665191]">Specialized AAA Tools</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#665191]">Duo Security</h4>
+                            <p class="text-gray-600">Provides a user-friendly Multi-Factor Authentication (MFA) solution that integrates with a wide range of applications and services.</p>
+                            <a href="https://duo.com/" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#665191]">CyberArk</h4>
+                            <p class="text-gray-600">A top provider of Privileged Access Management (PAM), which is crucial for controlling and monitoring access for high-privilege accounts.</p>
+                            <a href="https://www.cyberark.com/" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#d45087]">SIEM Tools (Accounting)</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#d45087]">Splunk</h4>
+                            <p class="text-gray-600">A widely used platform for collecting, searching, and analyzing machine-generated data, including security logs, which is essential for the accounting phase.</p>
+                            <a href="https://www.splunk.com/" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#d45087]">Microsoft Sentinel</h4>
+                            <p class="text-gray-600">A scalable, cloud-native Security Information and Event Management (SIEM) solution that provides intelligent security analytics by analyzing logs from various sources.</p>
+                            <a href="https://www.microsoft.com/en-us/security/business/siem-and-soar/microsoft-sentinel" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="opensource-tools" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Popular Open-Source Security Tools</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">These tools are essential for security professionals, providing powerful capabilities for network analysis and penetration testing.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#2f4b7c]">Kali Linux</h3>
+                    <p class="text-gray-600">A Debian-based Linux distribution that provides a comprehensive environment with hundreds of pre-installed tools for penetration testing and digital forensics.</p>
+                    <a href="https://www.kali.org/" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#2f4b7c]">Burp Suite</h3>
+                    <p class="text-gray-600">An integrated platform for performing security testing of web applications. It includes tools for proxying, scanning, and spidering websites to find vulnerabilities.</p>
+                    <a href="https://portswigger.net/burp" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#2f4b7c]">Wireshark</h3>
+                    <p class="text-gray-600">A powerful and widely used network protocol analyzer. It allows professionals to capture and interactively browse the traffic running on a computer network.</p>
+                    <a href="https://www.wireshark.org/" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
                 </div>
             </div>
         </section>
@@ -229,114 +303,195 @@
         <section id="glossary" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Glossary of Key Terms</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">A quick reference for the essential terminology and abbreviations used in cybersecurity.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#003f5c]">AAA</h3>
-                    <p class="text-gray-600">Authentication, Authorization, and Accounting.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#003f5c]">A</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#003f5c]">AAA</h3>
+                        <p class="text-gray-600">Authentication, Authorization, and Accounting.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#2f4b7c]">Access Control</h3>
-                    <p class="text-gray-600">A security technique that regulates who or what can view or use resources.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#2f4b7c]">A</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#2f4b7c]">Access Control</h3>
+                        <p class="text-gray-600">A security technique that regulates who or what can view or use resources.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#665191]">ARP Spoofing</h3>
-                    <p class="text-gray-600">A type of MITM attack where an attacker sends false ARP messages to redirect network traffic.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#665191]">A</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#665191]">ARP Spoofing</h3>
+                        <p class="text-gray-600">A type of MITM attack where an attacker sends false ARP messages to redirect network traffic.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#a05195]">ATO</h3>
-                    <p class="text-gray-600">Account Takeover.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#a05195]">A</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#a05195]">ATO</h3>
+                        <p class="text-gray-600">Account Takeover.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#d45087]">Brute Force Attack</h3>
-                    <p class="text-gray-600">A trial-and-error method to guess information, such as passwords or PINs.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#d45087]">B</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#d45087]">Brute Force Attack</h3>
+                        <p class="text-gray-600">A trial-and-error method to guess information, such as passwords or PINs.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#f95d6a]">CIA Triad</h3>
-                    <p class="text-gray-600">Confidentiality, Integrity, and Availability. The foundational model for cybersecurity.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#f95d6a]">C</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#f95d6a]">CIA Triad</h3>
+                        <p class="text-gray-600">Confidentiality, Integrity, and Availability. The foundational model for cybersecurity.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#ff7c43]">DDoS</h3>
-                    <p class="text-gray-600">Distributed Denial-of-Service.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#ff7c43]">D</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#ff7c43]">DDoS</h3>
+                        <p class="text-gray-600">Distributed Denial-of-Service.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#ffa600]">Encryption</h3>
-                    <p class="text-gray-600">The process of converting data into a code to prevent unauthorized access.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#ffa600]">E</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#ffa600]">Encryption</h3>
+                        <p class="text-gray-600">The process of converting data into a code to prevent unauthorized access.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#003f5c]">Firewall</h3>
-                    <p class="text-gray-600">A network security device that filters incoming and outgoing network traffic.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#003f5c]">F</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#003f5c]">Firewall</h3>
+                        <p class="text-gray-600">A network security device that filters incoming and outgoing network traffic.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#2f4b7c]">FTC</h3>
-                    <p class="text-gray-600">Federal Trade Commission.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#2f4b7c]">F</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#2f4b7c]">FTC</h3>
+                        <p class="text-gray-600">Federal Trade Commission.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#665191]">IAM</h3>
-                    <p class="text-gray-600">Identity and Access Management.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#665191]">I</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#665191]">IAM</h3>
+                        <p class="text-gray-600">Identity and Access Management.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#a05195]">ICS</h3>
-                    <p class="text-gray-600">Industrial Control Systems.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#a05195]">I</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#a05195]">ICS</h3>
+                        <p class="text-gray-600">Industrial Control Systems.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#d45087]">Malware</h3>
-                    <p class="text-gray-600">Malicious software designed to cause damage to a system.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#d45087]">M</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#d45087]">Malware</h3>
+                        <p class="text-gray-600">Malicious software designed to cause damage to a system.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#f95d6a]">MFA</h3>
-                    <p class="text-gray-600">Multi-Factor Authentication.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#f95d6a]">M</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#f95d6a]">MFA</h3>
+                        <p class="text-gray-600">Multi-Factor Authentication.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#ff7c43]">MITM</h3>
-                    <p class="text-gray-600">Man-in-the-Middle.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#ff7c43]">M</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#ff7c43]">MITM</h3>
+                        <p class="text-gray-600">Man-in-the-Middle.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#ffa600]">NHS</h3>
-                    <p class="text-gray-600">National Health Service (UK).</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#ffa600]">N</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#ffa600]">NHS</h3>
+                        <p class="text-gray-600">National Health Service (UK).</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#003f5c]">OT</h3>
-                    <p class="text-gray-600">Operational Technology.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#003f5c]">O</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#003f5c]">OT</h3>
+                        <p class="text-gray-600">Operational Technology.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#2f4b7c]">PAM</h3>
-                    <p class="text-gray-600">Privileged Access Management.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#2f4b7c]">P</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#2f4b7c]">PAM</h3>
+                        <p class="text-gray-600">Privileged Access Management.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#665191]">Penetration Testing</h3>
-                    <p class="text-gray-600">A simulated cyberattack to evaluate a system's security.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#665191]">P</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#665191]">Penetration Testing</h3>
+                        <p class="text-gray-600">A simulated cyberattack to evaluate a system's security.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#a05195]">Phishing</h3>
-                    <p class="text-gray-600">A social engineering attack to trick users into revealing sensitive information.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#a05195]">P</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#a05195]">Phishing</h3>
+                        <p class="text-gray-600">A social engineering attack to trick users into revealing sensitive information.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#d45087]">PII</h3>
-                    <p class="text-gray-600">Personally Identifiable Information.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#d45087]">P</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#d45087]">PII</h3>
+                        <p class="text-gray-600">Personally Identifiable Information.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#f95d6a]">Privilege Escalation</h3>
-                    <p class="text-gray-600">An attack where an attacker gains higher-level permissions.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#f95d6a]">P</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#f95d6a]">Privilege Escalation</h3>
+                        <p class="text-gray-600">An attack where an attacker gains higher-level permissions.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#ff7c43]">Ransomware</h3>
-                    <p class="text-gray-600">A type of malware that encrypts files and demands a ransom.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#ff7c43]">R</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#ff7c43]">Ransomware</h3>
+                        <p class="text-gray-600">A type of malware that encrypts files and demands a ransom.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#ffa600]">SCADA</h3>
-                    <p class="text-gray-600">Supervisory Control and Data Acquisition.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#ffa600]">S</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#ffa600]">SCADA</h3>
+                        <p class="text-gray-600">Supervisory Control and Data Acquisition.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#003f5c]">SIEM</h3>
-                    <p class="text-gray-600">Security Information and Event Management.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#003f5c]">S</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#003f5c]">SIEM</h3>
+                        <p class="text-gray-600">Security Information and Event Management.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#2f4b7c]">VPN</h3>
-                    <p class="text-gray-600">Virtual Private Network.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#2f4b7c]">V</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#2f4b7c]">VPN</h3>
+                        <p class="text-gray-600">Virtual Private Network.</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="font-bold text-lg mb-2 text-[#665191]">Zero Trust</h3>
-                    <p class="text-gray-600">A security model that trusts no user or device by default.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="mr-4 text-2xl text-[#665191]">Z</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-0 text-[#665191]">Zero Trust</h3>
+                        <p class="text-gray-600">A security model that trusts no user or device by default.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -419,6 +574,7 @@
                         callbacks: {
                             title: tooltipTitleCallback
                         }
+                        
                     }
                 },
                 scales: {
@@ -439,4 +595,3 @@
     </script>
 </body>
 </html>
-
