@@ -1,1 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Fundamentals Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            color: #d1d5db;
+            line-height: 1;
+        }
+        .kpi-value {
+            font-weight: 900;
+            color: #f95d6a;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-gray-900 text-white text-center py-12 px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Cybersecurity Fundamentals</h1>
+        <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">A visual guide to understanding the core principles, threats, and defenses in the world of digital security.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="core-principles" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">The Core Principles</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Cybersecurity is built on two foundational frameworks: The CIA Triad and AAA. These concepts govern how we protect data and manage access.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4 text-center text-[#003f5c]">The CIA Triad</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">🛡️</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">Confidentiality</h4>
+                                <p class="text-gray-600">Ensures data is kept private and accessible only to authorized individuals. Think of it as digital privacy.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">🔄</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">Integrity</h4>
+                                <p class="text-gray-600">Maintains the trustworthiness and accuracy of data, ensuring it hasn't been tampered with.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">✅</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">Availability</h4>
+                                <p class="text-gray-600">Guarantees that systems and data are accessible to authorized users whenever they are needed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4 text-center text-[#665191]">The AAA Framework</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">🔑</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">Authentication</h4>
+                                <p class="text-gray-600">Verifying a user's identity. The "Who are you?" step, often done with passwords and MFA.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">📜</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">Authorization</h4>
+                                <p class="text-gray-600">Granting specific permissions. The "What can you do?" step that defines access rights.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">📈</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">Accounting</h4>
+                                <p class="text-gray-600">Tracking user actions. The "What did you do?" step, crucial for auditing and compliance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="threat-landscape" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">The Threat Landscape</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Cyberattacks come in many forms, but some are far more common than others. Understanding these threats is the first step toward effective defense.</p>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h3 class="text-xl font-bold mb-4 text-center">Most Common Attack Vectors</h3>
+                <div class="chart-container">
+                    <canvas id="commonAttacksChart"></canvas>
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-4">This chart shows the relative frequency of common attack types based on industry reports. Phishing remains a dominant entry point for attackers.</p>
+            </div>
+        </section>
+
+        <section id="historical-attacks" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Case Studies: Major Historical Attacks</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Real-world examples highlight the devastating impact of cyberattacks on businesses, governments, and individuals.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-2 text-[#d45087]">WannaCry (2017)</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">A global ransomware attack that crippled critical systems, including the UK's NHS, by exploiting an unpatched Windows vulnerability.</p>
+                    <a href="https://www.cloudflare.com/learning/security/ransomware/wannacry-ransomware/" class="text-[#d45087] font-semibold hover:underline mb-2">Read More</a>
+                    <p class="text-4xl kpi-value">>$4 Billion</p>
+                    <p class="font-semibold text-gray-700">Estimated Damages</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-2 text-[#f95d6a]">Equifax (2017)</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">A massive data breach at a major credit bureau resulting from a failure to patch a known web application vulnerability.</p>
+                    <a href="https://www.mozilla.org/en-US/products/monitor/equifax-data-breach/" class="text-[#f95d6a] font-semibold hover:underline mb-2">Read More</a>
+                    <p class="text-4xl kpi-value">147 Million</p>
+                    <p class="font-semibold text-gray-700">Consumers Affected</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-2 text-[#ff7c43]">Stuxnet (2010)</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">A sophisticated worm that targeted industrial control systems, demonstrating that cyberattacks could cause physical damage.</p>
+                    <a href="https://www2.cs.arizona.edu/~collberg/Teaching/466-566/2012/Resources/presentations/topic9-final/report.pdf" class="text-[#ff7c43] font-semibold hover:underline mb-2">Read More</a>
+                    <p class="text-4xl kpi-value">~1,000</p>
+                    <p class="font-semibold text-gray-700">Centrifuges Destroyed</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-2 text-[#ffa600]">Insomniac (2023)</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">A ransomware attack on a game developer, leading to the leak of massive amounts of confidential data and employee PII.</p>
+                    <a href="https://www.techradar.com/gaming/consoles-pc/insomniac-games-responds-to-distressing-cyberattack-like-logan-insomniac-is-resilient" class="text-[#ffa600] font-semibold hover:underline mb-2">Read More</a>
+                    <p class="text-4xl kpi-value">1.3 Million</p>
+                    <p class="font-semibold text-gray-700">Internal Files Leaked</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="incident-response" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">The Incident Response Playbook</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">When an attack happens, a structured response is critical. Playbooks guide teams through the chaos to minimize damage and restore operations.</p>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
+                        <h4 class="font-bold text-lg text-[#003f5c]">1. Preparation</h4>
+                        <p class="text-sm">Define roles & tools.</p>
+                    </div>
+                    <div class="flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
+                        <h4 class="font-bold text-lg text-[#2f4b7c]">2. Detection</h4>
+                        <p class="text-sm">Identify & confirm.</p>
+                    </div>
+                    <div class="flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
+                        <h4 class="font-bold text-lg text-[#665191]">3. Containment</h4>
+                        <p class="text-sm">Isolate & stop spread.</p>
+                    </div>
+                    <div class="flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
+                        <h4 class="font-bold text-lg text-[#a05195]">4. Eradication</h4>
+                        <p class="text-sm">Remove the threat.</p>
+                    </div>
+                    <div class="flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
+                        <h4 class="font-bold text-lg text-[#d45087]">5. Recovery</h4>
+                        <p class="text-sm">Restore systems.</p>
+                    </div>
+                    <div class="flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
+                        <h4 class="font-bold text-lg text-[#f95d6a]">6. Lessons Learned</h4>
+                        <p class="text-sm">Review & improve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-practices" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Your Defense Toolkit: Best Practices</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Personal and organizational security starts with simple, consistent habits. These five practices form a strong foundation for your defense.</p>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <li class="text-center">
+                        <div class="text-5xl mb-3">🔐</div>
+                        <h4 class="font-bold text-lg">Strong Passwords</h4>
+                        <p class="text-gray-600">Use unique, complex passwords for every account.</p>
+                    </li>
+                    <li class="text-center">
+                        <div class="text-5xl mb-3">👥</div>
+                        <h4 class="font-bold text-lg">Enable MFA</h4>
+                        <p class="text-gray-600">Add a second layer of verification to your logins.</p>
+                    </li>
+                    <li class="text-center">
+                        <div class="text-5xl mb-3">🔄</div>
+                        <h4 class="font-bold text-lg">Update Systems</h4>
+                        <p class="text-gray-600">Regularly patch software to fix vulnerabilities.</p>
+                    </li>
+                    <li class="text-center">
+                        <div class="text-5xl mb-3">📧</div>
+                        <h4 class="font-bold text-lg">Beware Phishing</h4>
+                        <p class="text-gray-600">Be skeptical of unsolicited emails and links.</p>
+                    </li>
+                    <li class="text-center">
+                        <div class="text-5xl mb-3">💾</div>
+                        <h4 class="font-bold text-lg">Backup Data</h4>
+                        <p class="text-gray-600">Keep secure copies of important files.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="glossary" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Glossary of Key Terms</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">A quick reference for the essential terminology and abbreviations used in cybersecurity.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#003f5c]">AAA</h3>
+                    <p class="text-gray-600">Authentication, Authorization, and Accounting.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#2f4b7c]">Access Control</h3>
+                    <p class="text-gray-600">A security technique that regulates who or what can view or use resources.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#665191]">ARP Spoofing</h3>
+                    <p class="text-gray-600">A type of MITM attack where an attacker sends false ARP messages to redirect network traffic.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#a05195]">ATO</h3>
+                    <p class="text-gray-600">Account Takeover.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#d45087]">Brute Force Attack</h3>
+                    <p class="text-gray-600">A trial-and-error method to guess information, such as passwords or PINs.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#f95d6a]">CIA Triad</h3>
+                    <p class="text-gray-600">Confidentiality, Integrity, and Availability. The foundational model for cybersecurity.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#ff7c43]">DDoS</h3>
+                    <p class="text-gray-600">Distributed Denial-of-Service.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#ffa600]">Encryption</h3>
+                    <p class="text-gray-600">The process of converting data into a code to prevent unauthorized access.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#003f5c]">Firewall</h3>
+                    <p class="text-gray-600">A network security device that filters incoming and outgoing network traffic.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#2f4b7c]">FTC</h3>
+                    <p class="text-gray-600">Federal Trade Commission.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#665191]">IAM</h3>
+                    <p class="text-gray-600">Identity and Access Management.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#a05195]">ICS</h3>
+                    <p class="text-gray-600">Industrial Control Systems.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#d45087]">Malware</h3>
+                    <p class="text-gray-600">Malicious software designed to cause damage to a system.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#f95d6a]">MFA</h3>
+                    <p class="text-gray-600">Multi-Factor Authentication.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#ff7c43]">MITM</h3>
+                    <p class="text-gray-600">Man-in-the-Middle.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#ffa600]">NHS</h3>
+                    <p class="text-gray-600">National Health Service (UK).</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#003f5c]">OT</h3>
+                    <p class="text-gray-600">Operational Technology.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#2f4b7c]">PAM</h3>
+                    <p class="text-gray-600">Privileged Access Management.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#665191]">Penetration Testing</h3>
+                    <p class="text-gray-600">A simulated cyberattack to evaluate a system's security.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#a05195]">Phishing</h3>
+                    <p class="text-gray-600">A social engineering attack to trick users into revealing sensitive information.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#d45087]">PII</h3>
+                    <p class="text-gray-600">Personally Identifiable Information.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#f95d6a]">Privilege Escalation</h3>
+                    <p class="text-gray-600">An attack where an attacker gains higher-level permissions.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#ff7c43]">Ransomware</h3>
+                    <p class="text-gray-600">A type of malware that encrypts files and demands a ransom.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#ffa600]">SCADA</h3>
+                    <p class="text-gray-600">Supervisory Control and Data Acquisition.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#003f5c]">SIEM</h3>
+                    <p class="text-gray-600">Security Information and Event Management.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#2f4b7c]">VPN</h3>
+                    <p class="text-gray-600">Virtual Private Network.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg mb-2 text-[#665191]">Zero Trust</h3>
+                    <p class="text-gray-600">A security model that trusts no user or device by default.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 px-4 bg-gray-900 text-gray-400 mt-16">
+        <p>Stay informed, stay secure.</p>
+        <p class="text-sm mt-2">This infographic is based on the "Cybersecurity & Network Security Fundamentals" guide.</p>
+    </footer>
+
+    <script>
+        function wrapLabel(str, max_width) {
+            if (str.length <= max_width) {
+                return str;
+            }
+            const words = str.split(' ');
+            const lines = [];
+            let current_line = '';
+            for (const word of words) {
+                if ((current_line + ' ' + word).trim().length > max_width && current_line.length > 0) {
+                    lines.push(current_line);
+                    current_line = word;
+                } else {
+                    current_line = (current_line + ' ' + word).trim();
+                }
+            }
+            if (current_line.length > 0) {
+                lines.push(current_line);
+            }
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const commonAttacksData = {
+            labels: [
+                'Phishing',
+                wrapLabel('Malware & Ransomware', 16),
+                'DDoS Attacks',
+                wrapLabel('Man-in-the-Middle (MITM)', 16),
+                wrapLabel('Brute Force & ATO', 16),
+                'Privilege Escalation'
+            ],
+            datasets: [{
+                label: 'Frequency of Attacks (%)',
+                data: [41, 22, 11, 9, 12, 5],
+                backgroundColor: [
+                    '#003f5c',
+                    '#58508d',
+                    '#bc5090',
+                    '#ff6361',
+                    '#ffa600',
+                    '#665191'
+                ],
+                borderColor: '#ffffff',
+                borderWidth: 2
+            }]
+        };
+
+        const commonAttacksConfig = {
+            type: 'bar',
+            data: commonAttacksData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Relative Frequency (%)'
+                        }
+                    }
+                }
+            }
+        };
+
+        const commonAttacksChartCtx = document.getElementById('commonAttacksChart').getContext('2d');
+        new Chart(commonAttacksChartCtx, commonAttacksConfig);
+
+    </script>
+</body>
+</html>
 
