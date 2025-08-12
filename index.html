@@ -15,6 +15,7 @@
             background-color: #f0f4f8;
         }
         .chart-container {
+            /* This ensures the chart scales responsively */
             position: relative;
             width: 100%;
             max-width: 600px;
@@ -28,10 +29,19 @@
                 height: 400px;
             }
         }
+        /* Mobile-first approach for the flowchart arrow, stacks vertically on small screens */
         .flowchart-arrow {
             font-size: 2rem;
             color: #d1d5db;
             line-height: 1;
+            /* Rotate arrow on mobile for vertical stacking */
+            transform: rotate(90deg);
+        }
+        /* Un-rotate arrow on medium and larger screens for horizontal layout */
+        @media (min-width: 768px) {
+            .flowchart-arrow {
+                transform: rotate(0deg);
+            }
         }
         .kpi-value {
             font-weight: 900;
@@ -41,6 +51,7 @@
 </head>
 <body class="text-gray-800">
 
+    <!-- Header Section: Uses fluid text sizes and ample padding -->
     <header class="bg-gray-900 text-white text-center py-12 px-4">
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Cybersecurity Fundamentals</h1>
         <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">A visual guide to understanding the core principles, threats, and defenses in the world of digital security.</p>
@@ -48,6 +59,7 @@
 
     <main class="container mx-auto p-4 md:p-8">
         
+        <!-- Core Principles Section: Grid layout that goes from 1 column on mobile to 2 on medium screens -->
         <section id="core-principles" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">The Core Principles</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Cybersecurity is built on two foundational frameworks: The CIA Triad and AAA. These concepts govern how we protect data and manage access.</p>
@@ -107,6 +119,7 @@
             </div>
         </section>
 
+        <!-- Threat Landscape Section -->
         <section id="threat-landscape" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">The Threat Landscape</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Cyberattacks come in many forms, but some are far more common than others. Understanding these threats is the first step toward effective defense.</p>
@@ -119,6 +132,7 @@
             </div>
         </section>
 
+        <!-- Case Studies Section: Grid layout that goes from 1 column on mobile to 2 on md, and 4 on lg -->
         <section id="historical-attacks" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Case Studies: Major Historical Attacks</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Real-world examples highlight the devastating impact of cyberattacks on businesses, governments, and individuals.</p>
@@ -154,6 +168,7 @@
             </div>
         </section>
 
+        <!-- Security Tools Section: Grid layout that goes from 1 column on mobile to 2 on md, and 3 on lg -->
         <section id="security-tools" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Market-Leading Cybersecurity Tools</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">The cybersecurity industry offers a wide array of products, from all-in-one platforms to specialized solutions for specific tasks like authentication and event management.</p>
@@ -206,6 +221,7 @@
             </div>
         </section>
 
+        <!-- Open-source Tools Section: Grid layout that goes from 1 column on mobile to 3 on medium screens -->
         <section id="opensource-tools" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Popular Open-Source Security Tools</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">These tools are essential for security professionals, providing powerful capabilities for network analysis and penetration testing.</p>
@@ -228,36 +244,85 @@
             </div>
         </section>
 
+        <!-- Zero Trust Section: Uses responsive grids and text styling -->
+        <section id="zero-trust" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Zero Trust Architecture: The Modern Security Model</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Zero Trust is a security framework that assumes no user or device can be trusted by default, regardless of its location. This is a fundamental shift from traditional perimeter-based security.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Traditional Model Card -->
+                <div class="bg-gray-100 rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+                    <h3 class="text-2xl font-bold mb-4 text-red-500 text-center">The Traditional Model</h3>
+                    <div class="text-6xl text-center mb-4">🏰</div>
+                    <p class="text-gray-700 mb-4 leading-relaxed">This model is often likened to a **"castle and moat"**. There is a strong perimeter (the castle walls) that protects the internal network. Once a user or device is authenticated and gains entry, they are generally trusted to move freely within the network. The problem is, if an attacker breaches the perimeter, they have free rein to move laterally, or "east-west," inside the network without further checks.</p>
+                    <p class="text-gray-700 font-bold text-lg mt-auto text-center">Key Assumption: <span class="text-red-500">Trust is granted implicitly</span> based on location.</p>
+                </div>
+                <!-- Zero Trust Model Card -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-500 text-center">The Zero Trust Model</h3>
+                    <div class="text-6xl text-center mb-4">🛡️</div>
+                    <p class="text-gray-700 mb-4 leading-relaxed">Zero Trust, in contrast, assumes there is no trusted network. Every access request, from any user or device, must be **continuously verified and authorized**. This approach treats every resource as if it were on the public internet, requiring strict authentication and authorization for every single interaction. This prevents attackers from moving freely even if they compromise a single device.</p>
+                    <p class="text-gray-700 font-bold text-lg mt-auto text-center">Key Principle: <span class="text-blue-500">Never trust, always verify</span> all access attempts.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-3xl font-bold mb-8 text-center text-gray-900">Core Principles of Zero Trust</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Principle 1 Card -->
+                    <div class="flex flex-col items-center text-center p-6 bg-blue-50 rounded-lg shadow-md">
+                        <div class="text-6xl mb-4 text-blue-600">🔍</div>
+                        <h4 class="font-extrabold text-xl text-gray-900 mb-2">Verify Explicitly</h4>
+                        <p class="text-gray-700">All access must be explicitly verified. This means every user, device, and application is authenticated and authorized before being granted access. This is a continuous process.</p>
+                    </div>
+                    <!-- Principle 2 Card -->
+                    <div class="flex flex-col items-center text-center p-6 bg-blue-50 rounded-lg shadow-md">
+                        <div class="text-6xl mb-4 text-blue-600">🔒</div>
+                        <h4 class="font-extrabold text-xl text-gray-900 mb-2">Use Least Privilege Access</h4>
+                        <p class="text-gray-700">Users and devices should only have access to the resources they absolutely need. This minimizes the potential for an attacker to gain access to sensitive systems.</p>
+                    </div>
+                    <!-- Principle 3 Card -->
+                    <div class="flex flex-col items-center text-center p-6 bg-blue-50 rounded-lg shadow-md">
+                        <div class="text-6xl mb-4 text-blue-600">🎯</div>
+                        <h4 class="font-extrabold text-xl text-gray-900 mb-2">Assume Breach</h4>
+                        <p class="text-gray-700">This principle assumes that a breach is inevitable. Security controls are designed to minimize the impact of an attack and to detect and contain malicious activity quickly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Incident Response Section: Uses flexbox that switches from vertical to horizontal -->
         <section id="incident-response" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">The Incident Response Playbook</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">When an attack happens, a structured response is critical. Playbooks guide teams through the chaos to minimize damage and restore operations.</p>
             <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <!-- Flex container stacks vertically on small screens and horizontally on medium screens and up -->
                 <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
                     <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
                         <h4 class="font-bold text-lg text-[#003f5c]">1. Preparation</h4>
                         <p class="text-sm">Define roles & tools.</p>
                     </div>
-                    <div class="flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <!-- The arrow rotates to point down on mobile and right on desktop -->
+                    <div class="flowchart-arrow">&rarr;</div>
                     <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
                         <h4 class="font-bold text-lg text-[#2f4b7c]">2. Detection</h4>
                         <p class="text-sm">Identify & confirm.</p>
                     </div>
-                    <div class="flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="flowchart-arrow">&rarr;</div>
                     <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
                         <h4 class="font-bold text-lg text-[#665191]">3. Containment</h4>
                         <p class="text-sm">Isolate & stop spread.</p>
                     </div>
-                    <div class="flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="flowchart-arrow">&rarr;</div>
                     <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
                         <h4 class="font-bold text-lg text-[#a05195]">4. Eradication</h4>
                         <p class="text-sm">Remove the threat.</p>
                     </div>
-                    <div class="flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="flowchart-arrow">&rarr;</div>
                     <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
                         <h4 class="font-bold text-lg text-[#d45087]">5. Recovery</h4>
                         <p class="text-sm">Restore systems.</p>
                     </div>
-                    <div class="flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="flowchart-arrow">&rarr;</div>
                     <div class="text-center p-4 rounded-lg bg-gray-100 flex-1">
                         <h4 class="font-bold text-lg text-[#f95d6a]">6. Lessons Learned</h4>
                         <p class="text-sm">Review & improve.</p>
@@ -266,10 +331,12 @@
             </div>
         </section>
 
+        <!-- Best Practices Section: Grid layout that goes from 1 column on mobile to 2 on sm, and 5 on lg -->
         <section id="best-practices" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Your Defense Toolkit: Best Practices</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Personal and organizational security starts with simple, consistent habits. These five practices form a strong foundation for your defense.</p>
             <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <!-- This grid wraps to a single column on extra small screens, then to 2 columns on small screens -->
                 <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
                     <li class="text-center">
                         <div class="text-5xl mb-3">🔐</div>
@@ -300,6 +367,7 @@
             </div>
         </section>
 
+        <!-- Glossary Section: Grid layout that goes from 1 column on mobile to 2 on md, and 3 on lg -->
         <section id="glossary" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Glossary of Key Terms</h2>
             <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">A quick reference for the essential terminology and abbreviations used in cybersecurity.</p>
@@ -486,24 +554,19 @@
                         <p class="text-gray-600">Virtual Private Network.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
-                    <div class="mr-4 text-2xl text-[#665191]">Z</div>
-                    <div>
-                        <h3 class="font-bold text-lg mb-0 text-[#665191]">Zero Trust</h3>
-                        <p class="text-gray-600">A security model that trusts no user or device by default.</p>
-                    </div>
-                </div>
             </div>
         </section>
 
     </main>
 
+    <!-- Footer section -->
     <footer class="text-center py-8 px-4 bg-gray-900 text-gray-400 mt-16">
         <p>Stay informed, stay secure.</p>
         <p class="text-sm mt-2">This infographic is based on the "Cybersecurity & Network Security Fundamentals" guide.</p>
     </footer>
 
     <script>
+        // This function wraps long labels for better readability on small screens.
         function wrapLabel(str, max_width) {
             if (str.length <= max_width) {
                 return str;
@@ -525,6 +588,7 @@
             return lines;
         }
 
+        // This callback is used to display the full label in the tooltip, even if it's wrapped in the chart.
         const tooltipTitleCallback = (tooltipItems) => {
             const item = tooltipItems[0];
             let label = item.chart.data.labels[item.dataIndex];
@@ -535,6 +599,7 @@
         };
 
         const commonAttacksData = {
+            // Labels are wrapped for mobile readability
             labels: [
                 'Phishing',
                 wrapLabel('Malware & Ransomware', 16),
@@ -574,7 +639,6 @@
                         callbacks: {
                             title: tooltipTitleCallback
                         }
-                        
                     }
                 },
                 scales: {
@@ -589,6 +653,7 @@
             }
         };
 
+        // Initialize the chart
         const commonAttacksChartCtx = document.getElementById('commonAttacksChart').getContext('2d');
         new Chart(commonAttacksChartCtx, commonAttacksConfig);
 
